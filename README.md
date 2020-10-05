@@ -5,13 +5,13 @@
 </p>
 
 ### Anwendung
-GUI version
+GUI
 ```
 $ python3 CodeCreator.v1.0.0.py
 ```
-Python Console version
+Python Console / Terminal
 ```
-$ python3 CodeCreator_Python-Terminal.py
+$ python3 CCodeCreator.Python.py
 ```
 
 Windows version /WIN/CodeCreator.v1.0.0.exe
