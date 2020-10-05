@@ -14,4 +14,4 @@ Python Console / Terminal
 $ python3 CodeCreator.Python.py
 ```
 
-Windows version /WIN/CodeCreator.v1.0.0.exe
+Windows /WIN/CodeCreator.v1.0.0.exe
