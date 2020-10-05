@@ -6,7 +6,7 @@ import PyQt5.uic as uic
 import PyQt5.QtWidgets as widgets
 
 app = widgets.QApplication(sys.argv)
-w = uic.loadUi("qt5designer.ui")
+w = uic.loadUi("qt5designer.v1.0.0.ui")
 
 
 def clickmethod():
