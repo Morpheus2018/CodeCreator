@@ -19,7 +19,7 @@ def clickmethod():
 FILENAME = "output.txt"
 
 w.pushButtonSave.clicked.connect(clickmethod)
-w.radioButton_1.clicked.connect(clickmethod())
+w.radioButton_1.clicked.connect(clickmethod)
 
 w.show()
 sys.exit(app.exec_())
