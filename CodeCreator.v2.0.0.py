@@ -90,7 +90,7 @@ class Ui_dialog(object):
 
     def retranslateUi(self, dialog):
         _translate = QtCore.QCoreApplication.translate
-        dialog.setWindowTitle(_translate("dialog", "CodeCreator  v1.0.0"))
+        dialog.setWindowTitle(_translate("dialog", "CodeCreator  v2.0.0"))
         self.radioButton_1.setToolTip(_translate("dialog", "Standard-Aktiviert"))
         self.radioButton_1.setText(_translate("dialog", "Code-1"))
         self.radioButton_2.setText(_translate("dialog", "Code-2"))
