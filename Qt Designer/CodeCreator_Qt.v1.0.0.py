@@ -13,7 +13,11 @@ def clickmethod():
     output = f'<li><a href="{w.lineEditLINK.text()}" target="_blank"><img data-src="{w.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{w.lineEditTITLE.text()}" border="2"/>{w.lineEditNAME.text()}</a></li>\n '
     with open(FILENAME, "a", encoding='UTF-8') as output_file:
         output_file.write(output)
-    print(f'{output}'), (w.lineEditLINK.clear()), (w.lineEditBILD.clear()), (w.lineEditTITLE.clear()), (w.lineEditNAME.clear())
+    print(f'{output}')
+    w.lineEditLINK.clear()
+    w.lineEditBILD.clear()
+    w.lineEditTITLE.clear()
+    w.lineEditNAME.clear()
 
 
 FILENAME = "output.txt"
