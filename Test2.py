@@ -19,6 +19,7 @@ class Ui_dialog(object):
         self.radioButton_1 = QtWidgets.QRadioButton(dialog)
         self.radioButton_1.setChecked(True)
         self.radioButton_1.setObjectName("radioButton_1")
+        self.radioButton_1.toggled.connect(self.onClicked1)
         self.horizontalLayout.addWidget(self.radioButton_1)
         self.radioButton_2 = QtWidgets.QRadioButton(dialog)
         self.radioButton_2.setObjectName("radioButton_2")
@@ -109,18 +110,25 @@ class Ui_dialog(object):
         self.pushButtonEde.setText(_translate("dialog", "Beenden"))
 
     def clickMethod(self):
-        output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
-        with open(FILENAME, "a", encoding='UTF-8') as output_file:
-            output_file.write(output)
-        print(f'{output}')
+        #output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
+        #with open(FILENAME, "a", encoding='UTF-8') as output_file:
+         #   output_file.write(output)
+        #print(f'{output}')
         (self.lineEditLINK.clear())
         (self.lineEditBILD.clear())
         (self.lineEditTITLE.clear())
         (self.lineEditNAME.clear())
 
+    def onClicked1(self):
+        radioButton_1 = self.sender()
+        if radioButton_1.isChecked():
+            output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
+            with open(FILENAME1, "a", encoding='UTF-8') as output_file:
+                output_file.write(output)
+            print("Country is")
 
 FILENAME = "output.txt"
-
+FILENAME1 = "output1.txt"
 
 
 if __name__ == "__main__":

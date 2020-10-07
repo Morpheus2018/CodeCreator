@@ -18,33 +18,20 @@ class Window(QWidget):
         radiobutton.toggled.connect(self.onClicked)
         layout.addWidget(radiobutton, 0, 1)
 
-        radiobutton2 = QRadioButton("USA")
-        radiobutton2.country = "USA"
-        radiobutton2.toggled.connect(self.onClicked2)
-        layout.addWidget(radiobutton2, 0, 3)
-
-        radiobutton1 = QRadioButton("Japan")
-        radiobutton1.country = "Japan"
-        radiobutton1.toggled.connect(self.onClicked1)
-        layout.addWidget(radiobutton1, 0, 2)
-
-    def onClicked1, onClicked2(self):
-        radioButton1 = self.sender()
-        if radioButton1.isChecked():
-            output = f'JAPANNNNNNNNNNN\n'
-            with open(FILENAME1, "a", encoding='UTF-8') as output_file:
-                output_file.write(output)
-            print("Country is %s" % (radioButton1.country), (f'{output}'))
-
-
+        radiobutton = QRadioButton("Japan")
+        radiobutton.country = "Japan"
+        radiobutton.toggled.connect(self.onClicked)
+        layout.addWidget(radiobutton, 0, 2)
 
     def onClicked(self):
         radioButton = self.sender()
         if radioButton.isChecked():
-            print("Country is %s" % (radioButton.country))
+            output = f'TESSSSSSSS\n '
+            with open(FILENAME, "a", encoding='UTF-8') as output_file:
+                output_file.write(output)
+            print("Country is")
 
-FILENAME1 = "output1.txt"
-FILENAME2 = "output2.txt"
+FILENAME = "output1.txt"
 
 app = QApplication(sys.argv)
 screen = Window()
