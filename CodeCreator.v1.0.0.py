@@ -82,16 +82,18 @@ class Ui_dialog(object):
         self.lineEditTITLE.setPlaceholderText(_translate("dialog", "Titel"))
         self.labelTITLE.setText(_translate("dialog", "TITLE"))
 
-
     def clickMethod(self):
         output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
         with open(FILENAME, "a", encoding='UTF-8') as output_file:
             output_file.write(output)
-        print(f'{output}'), (self.lineEditLINK.clear()), (self.lineEditBILD.clear()), (self.lineEditTITLE.clear()), (self.lineEditNAME.clear())
+        print(f'{output}')
+        (self.lineEditLINK.clear())
+        (self.lineEditBILD.clear())
+        (self.lineEditTITLE.clear())
+        (self.lineEditNAME.clear())
 
 
 FILENAME = "output.txt"
-    
 
 if __name__ == "__main__":
     import sys
