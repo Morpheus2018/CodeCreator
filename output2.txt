@@ -56,3 +56,21 @@ app = QApplication(sys.argv)
 screen = Window()
 screen.show()
 sys.exit(app.exec_())
+
+
+    def clickMethod(self):
+        (self.lineEditLINK.clear())
+        (self.lineEditBILD.clear())
+        (self.lineEditTITLE.clear())
+        (self.lineEditNAME.clear())
+
+
+    def onClicked1(self):
+        radioButton_1 = self.sender()
+        if radioButton_1.isChecked():
+            output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
+            with open(FILENAME, "a", encoding='UTF-8') as output_file:
+                output_file.write(output)
+            print(f'{output}')USAAAAAA
+USAAAAAA
+USAAAAAA
