@@ -4,7 +4,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtWidgets import QApplication, QDialog, QRadioButton, QHBoxLayout, QGroupBox, QVBoxLayout, QLabel
 
 class Ui_dialog(object):
     def setupUi(self, dialog):
@@ -19,10 +19,11 @@ class Ui_dialog(object):
         self.radioButton_1 = QtWidgets.QRadioButton(dialog)
         self.radioButton_1.setChecked(True)
         self.radioButton_1.setObjectName("radioButton_1")
-        self.radioButton_1.toggled.connect(self.onClicked1)
+        self.radioButton_1.toggled.connect(self.onClicked)
         self.horizontalLayout.addWidget(self.radioButton_1)
         self.radioButton_2 = QtWidgets.QRadioButton(dialog)
         self.radioButton_2.setObjectName("radioButton_2")
+       # self.radioButton_2.toggled.connect(self.onClicked)
         self.horizontalLayout.addWidget(self.radioButton_2)
         self.radioButton_3 = QtWidgets.QRadioButton(dialog)
         self.radioButton_3.setObjectName("radioButton_3")
@@ -110,22 +111,23 @@ class Ui_dialog(object):
         self.pushButtonEde.setText(_translate("dialog", "Beenden"))
 
     def clickMethod(self):
-        #output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
-        #with open(FILENAME, "a", encoding='UTF-8') as output_file:
-         #   output_file.write(output)
-        #print(f'{output}')
-        (self.lineEditLINK.clear())
-        (self.lineEditBILD.clear())
-        (self.lineEditTITLE.clear())
-        (self.lineEditNAME.clear())
-
-    def onClicked1(self):
-        radioButton_1 = self.sender()
-        if radioButton_1.isChecked():
             output = f'<li><a href="{self.lineEditLINK.text()}" target="_blank"><img data-src="{self.lineEditBILD.text()}" class="lazyload" loading="lazy" title="{self.lineEditTITLE.text()}" border="2"/>{self.lineEditNAME.text()}</a></li>\n '
             with open(FILENAME1, "a", encoding='UTF-8') as output_file:
                 output_file.write(output)
-            print("Country is")
+            print(f'{output}')
+            (self.lineEditLINK.clear())
+            (self.lineEditBILD.clear())
+            (self.lineEditTITLE.clear())
+            (self.lineEditNAME.clear())
+
+    def onClicked(self):
+        if self.radioButton_1.isChecked():
+            output = f'CODE-1\n'
+            with open(FILENAME1, "a", encoding='UTF-8') as output_file:
+                output_file.write(output)
+            print(f'{output}')
+            self.groupBoxCode.setTitle("You Have Selected ")
+
 
 FILENAME = "output.txt"
 FILENAME1 = "output1.txt"
