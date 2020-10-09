@@ -6,41 +6,42 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QRadioButton, QHBoxLayout, QGroupBox, QVBoxLayout, QLabel
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(875, 273)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(Dialog)
+
+class Ui_dialog(object):
+    def setupUi(self, dialog):
+        dialog.setObjectName("dialog")
+        dialog.resize(875, 273)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(dialog)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         #radioButton_1
-        self.radioButton_1 = QtWidgets.QRadioButton(Dialog)
+        self.radioButton_1 = QtWidgets.QRadioButton(dialog)
         self.radioButton_1.setChecked(True)
         self.radioButton_1.setObjectName("radioButton_1")
         self.radioButton_1.toggled.connect(self.onClicked)
         self.horizontalLayout.addWidget(self.radioButton_1)
         #radioButton_2
-        self.radioButton_2 = QtWidgets.QRadioButton(Dialog)
+        self.radioButton_2 = QtWidgets.QRadioButton(dialog)
         self.radioButton_2.setObjectName("radioButton_2")
         self.radioButton_2.toggled.connect(self.onClicked)
         self.horizontalLayout.addWidget(self.radioButton_2)
         # radioButton_4
-        self.radioButton_3 = QtWidgets.QRadioButton(Dialog)
+        self.radioButton_3 = QtWidgets.QRadioButton(dialog)
         self.radioButton_3.setObjectName("radioButton_3")
         self.horizontalLayout.addWidget(self.radioButton_3)
         self.radioButton_3.toggled.connect(self.onClicked)
         #radioButton_4
-        self.radioButton_4 = QtWidgets.QRadioButton(Dialog)
+        self.radioButton_4 = QtWidgets.QRadioButton(dialog)
         self.radioButton_4.setObjectName("radioButton_4")
         self.horizontalLayout.addWidget(self.radioButton_4)
         self.radioButton_4.toggled.connect(self.onClicked)
         self.verticalLayout.addLayout(self.horizontalLayout)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
-        self.groupBoxCode = QtWidgets.QGroupBox(Dialog)
+        self.groupBoxCode = QtWidgets.QGroupBox(dialog)
         self.groupBoxCode.setObjectName("groupBoxCode")
         self.gridLayout = QtWidgets.QGridLayout(self.groupBoxCode)
         self.gridLayout.setObjectName("gridLayout")
@@ -86,19 +87,19 @@ class Ui_Dialog(object):
         self.verticalLayout.addWidget(self.groupBoxCode)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 
-        self.retranslateUi(Dialog)
-        self.pushButtonEde.clicked.connect(Dialog.close)
+        self.retranslateUi(dialog)
+        self.pushButtonEde.clicked.connect(dialog.close)
         self.pushButtonSave.clicked.connect(self.clickMethod)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
-        Dialog.setTabOrder(self.lineEditLINK, self.lineEditBILD)
-        Dialog.setTabOrder(self.lineEditBILD, self.lineEditTITLE)
-        Dialog.setTabOrder(self.lineEditTITLE, self.lineEditNAME)
-        Dialog.setTabOrder(self.lineEditNAME, self.pushButtonSave)
-        Dialog.setTabOrder(self.pushButtonSave, self.pushButtonEde)
+        QtCore.QMetaObject.connectSlotsByName(dialog)
+        dialog.setTabOrder(self.lineEditLINK, self.lineEditBILD)
+        dialog.setTabOrder(self.lineEditBILD, self.lineEditTITLE)
+        dialog.setTabOrder(self.lineEditTITLE, self.lineEditNAME)
+        dialog.setTabOrder(self.lineEditNAME, self.pushButtonSave)
+        dialog.setTabOrder(self.pushButtonSave, self.pushButtonEde)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "CodeCreator  v2.0.0"))
+        dialog.setWindowTitle(_translate("dialog", "CodeCreator  v2.0.0"))
         self.radioButton_1.setToolTip(_translate("dialog", "Standard-Aktiviert"))
         self.radioButton_1.setText(_translate("dialog", "Code-1"))
         self.radioButton_2.setText(_translate("dialog", "Code-2"))
@@ -143,8 +144,8 @@ FILENAME1 = "output1.txt"
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    dialog = QtWidgets.QDialog()
+    ui = Ui_dialog()
+    ui.setupUi(dialog)
+    dialog.show()
     sys.exit(app.exec_())
