@@ -57,12 +57,8 @@ class Window(QDialog):
     def onRadioBtn(self):
         radioBtn = self.sender()
         if radioBtn.isChecked():
-            output = f'TESTTT'
-            with open(FILENAME1, "a", encoding='UTF-8') as output_file:
-                output_file.write(output)
             self.label.setText("You Have Selected " + radioBtn.text())
 
-FILENAME1 = "output1.txt"
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

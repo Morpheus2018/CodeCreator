@@ -26,12 +26,7 @@ class Window(QWidget):
     def onClicked(self):
         radioButton = self.sender()
         if radioButton.isChecked():
-            output = f'TESSSSSSSS\n '
-            with open(FILENAME, "a", encoding='UTF-8') as output_file:
-                output_file.write(output)
-            print("Country is")
-
-FILENAME = "output1.txt"
+            print("Country is %s" % (radioButton.country))
 
 app = QApplication(sys.argv)
 screen = Window()
