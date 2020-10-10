@@ -7,7 +7,7 @@
 ### Anwendung
 GUI
 ```
-$ python3 CodeCreator.v1.0.0.py
+$ python3 CodeCreator.v2.0.0.py
 ```
 Python Console / Terminal
 ```
