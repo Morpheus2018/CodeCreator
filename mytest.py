@@ -35,11 +35,13 @@ class Ui_Dialog(object):
         self.radiobtn2.setObjectName("radiobtn2")
         self.horizontalLayout.addWidget(self.radiobtn2)
         self.radiobtn2.toggled.connect(self.onRadioBtn)
+        #self.radiobtn2.toggled.connect(self.onRadioBtn1)
         self.radiobtn3 = QtWidgets.QRadioButton(self.groupBox)
         self.radiobtn3.setText("Tennis")
         self.radiobtn3.setObjectName("radiobtn3")
         self.horizontalLayout.addWidget(self.radiobtn3)
-        self.radiobtn3.toggled.connect(self.onRadioBtn)
+        self.radiobtn2.toggled.connect(self.onRadioBtn)
+        #self.radiobtn3.toggled.connect(self.onRadioBtn2)
         self.verticalLayout.addWidget(self.groupBox)
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setText("")
@@ -60,7 +62,15 @@ class Ui_Dialog(object):
 
 #    def onRadioBtn(self):
 #        if self.radiobtn1.isChecked():
-#            self.label.setText("You Have Selected " + self.radiobtn1.text())
+#           self.label.setText("You Have Selected " + self.radiobtn1.text())
+
+#    def onRadioBtn1(self):
+#        if self.radiobtn2.isChecked():
+#            self.label.setText("You Have Selected " + self.radiobtn2.text())
+
+#    def onRadioBtn2(self):
+#        if self.radiobtn3.isChecked():
+#            self.label.setText("You Have Selected " + self.radiobtn3.text())
 
 if __name__ == "__main__":
     import sys
