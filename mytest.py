@@ -29,14 +29,17 @@ class Ui_Dialog(object):
         self.radiobtn1.setChecked(True)
         self.radiobtn1.setObjectName("radiobtn1")
         self.horizontalLayout.addWidget(self.radiobtn1)
+        self.radiobtn1.toggled.connect(self.onRadioBtn)
         self.radiobtn2 = QtWidgets.QRadioButton(self.groupBox)
         self.radiobtn2.setText("Cricket")
         self.radiobtn2.setObjectName("radiobtn2")
         self.horizontalLayout.addWidget(self.radiobtn2)
+        self.radiobtn2.toggled.connect(self.onRadioBtn)
         self.radiobtn3 = QtWidgets.QRadioButton(self.groupBox)
         self.radiobtn3.setText("Tennis")
         self.radiobtn3.setObjectName("radiobtn3")
         self.horizontalLayout.addWidget(self.radiobtn3)
+        self.radiobtn3.toggled.connect(self.onRadioBtn)
         self.verticalLayout.addWidget(self.groupBox)
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setText("")
@@ -50,6 +53,14 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         pass
 
+    def onRadioBtn(self):
+        radioBtn = self.sender()
+        if radioBtn.isChecked():
+            self.label.setText("You Have Selected " + radioBtn.text())
+
+#    def onRadioBtn(self):
+#        if self.radiobtn1.isChecked():
+#            self.label.setText("You Have Selected " + self.radiobtn1.text())
 
 if __name__ == "__main__":
     import sys
