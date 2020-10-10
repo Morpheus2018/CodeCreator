@@ -20,15 +20,19 @@ class Ui_dialog(object):
         self.radioButton_1.setChecked(True)
         self.radioButton_1.setObjectName("radioButton_1")
         self.horizontalLayout.addWidget(self.radioButton_1)
+        self.radioButton_1.toggled.connect(self.onClicked)
         self.radioButton_2 = QtWidgets.QRadioButton(dialog)
         self.radioButton_2.setObjectName("radioButton_2")
         self.horizontalLayout.addWidget(self.radioButton_2)
+        self.radioButton_2.toggled.connect(self.onClicked1)
         self.radioButton_3 = QtWidgets.QRadioButton(dialog)
         self.radioButton_3.setObjectName("radioButton_3")
         self.horizontalLayout.addWidget(self.radioButton_3)
+        self.radioButton_3.toggled.connect(self.onClicked2)
         self.radioButton_4 = QtWidgets.QRadioButton(dialog)
         self.radioButton_4.setObjectName("radioButton_4")
         self.horizontalLayout.addWidget(self.radioButton_4)
+        self.radioButton_4.toggled.connect(self.onClicked3)
         self.verticalLayout.addLayout(self.horizontalLayout)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem)
@@ -91,12 +95,12 @@ class Ui_dialog(object):
     def retranslateUi(self, dialog):
         _translate = QtCore.QCoreApplication.translate
         dialog.setWindowTitle(_translate("dialog", "CodeCreator  v2.0.0"))
-        self.radioButton_1.setToolTip(_translate("dialog", "Standard-Aktiviert"))
-        self.radioButton_1.setText(_translate("dialog", "Code-1"))
-        self.radioButton_2.setText(_translate("dialog", "Code-2"))
-        self.radioButton_3.setText(_translate("dialog", "Code-3"))
-        self.radioButton_4.setText(_translate("dialog", "Code-3"))
-        self.groupBoxCode.setTitle(_translate("dialog", "Code"))
+        self.radioButton_1.setToolTip(_translate("dialog", "Standard-Seite1"))
+        self.radioButton_1.setText(_translate("dialog", "Seite1"))
+        self.radioButton_2.setText(_translate("dialog", "Seite2"))
+        self.radioButton_3.setText(_translate("dialog", "Seite3"))
+        self.radioButton_4.setText(_translate("dialog", "Seite4"))
+        self.groupBoxCode.setTitle(_translate("dialog", "Seite1"))
         self.lineEditLINK.setPlaceholderText(_translate("dialog", "https://LINK.com"))
         self.labelLINK.setText(_translate("dialog", "LINK"))
         self.labelBILD.setText(_translate("dialog", "BILD"))
@@ -118,6 +122,37 @@ class Ui_dialog(object):
         (self.lineEditTITLE.clear())
         (self.lineEditNAME.clear())
 
+    def onClicked(self):
+        if self.radioButton_1.isChecked():
+            file = open("output.txt", "a")
+            file.write("Code für :" + self.radioButton_1.text() + "\n")
+            file.close()
+            self.groupBoxCode.setTitle("Code für " + self.radioButton_1.text())
+            print("Code für :" + self.radioButton_1.text() + "\n")
+
+    def onClicked1(self):
+        if self.radioButton_2.isChecked():
+            file = open("output.txt", "a")
+            file.write("Code für :" + self.radioButton_2.text() + "\n")
+            file.close()
+            self.groupBoxCode.setTitle("Code für " + self.radioButton_2.text())
+            print("Code für :" + self.radioButton_2.text() + "\n")
+
+    def onClicked2(self):
+        if self.radioButton_3.isChecked():
+            file = open("output.txt", "a")
+            file.write("Code für :" + self.radioButton_3.text() + "\n")
+            file.close()
+            self.groupBoxCode.setTitle("Code für " + self.radioButton_3.text())
+            print("Code für :" + self.radioButton_3.text() + "\n")
+
+    def onClicked3(self):
+        if self.radioButton_4.isChecked():
+            file = open("output.txt", "a")
+            file.write("Code für :" + self.radioButton_4.text() + "\n")
+            file.close()
+            self.groupBoxCode.setTitle("Code für " + self.radioButton_4.text())
+            print("Code für :" + self.radioButton_4.text() + "\n")
 
 FILENAME = "output.txt"
 
