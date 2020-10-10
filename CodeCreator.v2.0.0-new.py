@@ -156,6 +156,7 @@ class Ui_dialog(object):
 
 FILENAME = "output.txt"
 
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
