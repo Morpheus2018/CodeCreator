@@ -21,10 +21,10 @@
        <item>
         <widget class="QRadioButton" name="radioButton_1">
          <property name="toolTip">
-          <string>Standard-Aktiviert</string>
+          <string>Standard-Seite1</string>
          </property>
          <property name="text">
-          <string>Code-1</string>
+          <string>Seite1</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -34,21 +34,21 @@
        <item>
         <widget class="QRadioButton" name="radioButton_2">
          <property name="text">
-          <string>Code-2</string>
+          <string>Seite2</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="radioButton_3">
          <property name="text">
-          <string>Code-3</string>
+          <string>Seite3</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="radioButton_4">
          <property name="text">
-          <string>Code-3</string>
+          <string>Seite4</string>
          </property>
         </widget>
        </item>
@@ -70,7 +70,7 @@
      <item>
       <widget class="QGroupBox" name="groupBoxCode">
        <property name="title">
-        <string>Code</string>
+        <string>Seite1</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="1">
