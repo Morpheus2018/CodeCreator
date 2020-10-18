@@ -24,7 +24,7 @@
           <string>Standard-Seite1</string>
          </property>
          <property name="text">
-          <string>Seite1</string>
+          <string>Seite 1</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -34,21 +34,21 @@
        <item>
         <widget class="QRadioButton" name="radioButton2">
          <property name="text">
-          <string>Seite2</string>
+          <string>Seite 2</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="radioButton3">
          <property name="text">
-          <string>Seite3</string>
+          <string>Seite 3</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QRadioButton" name="radioButton4">
          <property name="text">
-          <string>Seite4</string>
+          <string>Seite 4</string>
          </property>
         </widget>
        </item>
@@ -70,7 +70,7 @@
      <item>
       <widget class="QGroupBox" name="groupBoxCode">
        <property name="title">
-        <string>Code für: Seite1</string>
+        <string>Code für: Seite 1</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="0">
