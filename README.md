@@ -14,4 +14,4 @@ Python Console / Terminal
 $ python3 CodeCreator.Python.py
 ```
 
-Windows /WIN/<a href="https://github.com/Morpheus2018/CodeCreator/raw/CC.v2.0.0/WIN/CodeCreator.v2.0.0.exe">CodeCreator.v2.0.0.exe </a>
+Windows /WIN/<a href="https://github.com/Morpheus2018/CodeCreator/raw/master/WIN/CodeCreator.v2.0.0.exe </a>
