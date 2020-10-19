@@ -1,7 +1,7 @@
 <h1 align="center">CodeCreator</h1>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Morpheus2018/CodeCreator/CC.v2.0.0/screenshot/screenshot.v2.0.0.png" alt="Empty interface">
+    <img src="https://raw.githubusercontent.com/Morpheus2018/CodeCreator/master/screenshot/screenshot.v2.0.0.png" alt="Empty interface">
 </p>
 
 ### Anwendung
