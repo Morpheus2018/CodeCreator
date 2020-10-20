@@ -1,5 +1,5 @@
-#import sys
-import subprocess, sys
+import sys
+import subprocess
 from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog
 from PyQt5.uic import loadUi
 
