@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>CodeCreator  v2.0.0</string>
+   <string>CodeCreator  v2.0.5</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -110,6 +110,9 @@
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
              <widget class="QPushButton" name="pushButtonNext">
+              <property name="toolTip">
+               <string>Nächste Code</string>
+              </property>
               <property name="text">
                <string>Next</string>
               </property>
@@ -117,13 +120,19 @@
             </item>
             <item>
              <widget class="QPushButton" name="pushButtonSave">
+              <property name="toolTip">
+               <string>Öffne fertige Code Datei</string>
+              </property>
               <property name="text">
-               <string>Speichern</string>
+               <string>Öffnen</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="pushButtonExit">
+              <property name="toolTip">
+               <string>Beende CodeCreator</string>
+              </property>
               <property name="text">
                <string>Beenden</string>
               </property>
