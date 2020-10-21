@@ -33,7 +33,7 @@ class CodeCreator(QDialog):
     def clickOffnen(self):
         opener = "open" if sys.platform == "darwin" else "xdg-open"
         subprocess.call([opener, OUTPUT_FILENAME])
-        #os.system(fileName) #Für Windows
+        #os.system(OUTPUT_FILENAME) #Für Windows
         # filename, _ = QFileDialog.getOpenFileName(
         #     filter=" (*.txt)"
         # )
