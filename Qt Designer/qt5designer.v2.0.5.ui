@@ -73,34 +73,6 @@
         <string>Code für: Seite 1</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="2" column="0">
-         <widget class="QLabel" name="labelBILD">
-          <property name="text">
-           <string>BILD</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="labelLINK">
-          <property name="text">
-           <string>LINK</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QLineEdit" name="lineEditTITLE">
-          <property name="placeholderText">
-           <string>Titel</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="labelNAME">
-          <property name="text">
-           <string>NAME</string>
-          </property>
-         </widget>
-        </item>
         <item row="7" column="1">
          <widget class="QSplitter" name="splitter">
           <property name="orientation">
@@ -142,13 +114,6 @@
           </widget>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEditLINK">
-          <property name="placeholderText">
-           <string>https://LINK.com</string>
-          </property>
-         </widget>
-        </item>
         <item row="2" column="1">
          <widget class="QLineEdit" name="lineEditBILD">
           <property name="placeholderText">
@@ -163,10 +128,45 @@
           </property>
          </widget>
         </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelBILD">
+          <property name="text">
+           <string>BILD</string>
+          </property>
+         </widget>
+        </item>
         <item row="4" column="1">
          <widget class="QLineEdit" name="lineEditNAME">
           <property name="placeholderText">
            <string>Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditLINK">
+          <property name="placeholderText">
+           <string>https://LINK.com</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelLINK">
+          <property name="text">
+           <string>LINK</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEditTITLE">
+          <property name="placeholderText">
+           <string>Titel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelNAME">
+          <property name="text">
+           <string>NAME</string>
           </property>
          </widget>
         </item>

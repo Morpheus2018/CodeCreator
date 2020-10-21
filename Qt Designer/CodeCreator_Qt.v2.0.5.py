@@ -1,6 +1,7 @@
 import sys
 import subprocess
-from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog
+#import os #Für Windows
+from PyQt5.QtWidgets import QApplication, QDialog
 from PyQt5.uic import loadUi
 
 OUTPUT_FILENAME = "output.txt"
@@ -34,9 +35,6 @@ class CodeCreator(QDialog):
         opener = "open" if sys.platform == "darwin" else "xdg-open"
         subprocess.call([opener, OUTPUT_FILENAME])
         #os.system(OUTPUT_FILENAME) #Für Windows
-        # filename, _ = QFileDialog.getOpenFileName(
-        #     filter=" (*.txt)"
-        # )
 
     def checkRadioButtonState(self):
         for radiobutton in self.radiobuttons:
