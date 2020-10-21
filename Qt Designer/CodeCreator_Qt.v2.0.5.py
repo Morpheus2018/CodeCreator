@@ -12,7 +12,7 @@ class CodeCreator(QDialog):
         super(CodeCreator, self).__init__()
         loadUi('qt5designer.v2.0.5.ui', self)
         self.pushButtonNext.clicked.connect(self.clickNext)
-        self.pushButtonSave.clicked.connect(self.clickOffnen)
+        self.pushButtonOpen.clicked.connect(self.clickOffnen)
         self.radiobuttons = [
             self.radioButton1, self.radioButton2, self.radioButton3, self.radioButton4
         ]
