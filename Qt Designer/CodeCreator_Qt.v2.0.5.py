@@ -39,7 +39,7 @@ class CodeCreator(QDialog):
     def checkRadioButtonState(self):
         for radiobutton in self.radiobuttons:
             if radiobutton.isChecked():
-                with open(OUTPUT_FILENAME, "a") as output:
+                with open(OUTPUT_FILENAME, "a", encoding='UTF-8') as output:
                     text = radiobutton.text()
                     output.write(f"Code für: {text}\n")
                     self.groupBoxCode.setTitle("Code für: " + text)
