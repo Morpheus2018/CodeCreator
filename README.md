@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<img src="https://raw.githubusercontent.com/Morpheus2018/CodeCreator/master/screenshot/screenshot.v2.0.5.png" alt="Empty interface">
+<img src="https://raw.githubusercontent.com/Morpheus2018/CodeCreator/master/screenshot/screenshot.v2.0.5.gif" alt="Empty interface">
 
 </p>
 
